@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 5cqb;
   min-height: 100vh;
 }
 
@@ -52,6 +52,9 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  /* width: "" */
+  justify-content: center;
+  text-align: center;
 }
 
 .card span {
@@ -59,17 +62,41 @@
   transition: transform 200ms;
 }
 
+.card img {
+  width: 75%;
+  border-radius: 15px;
+}
+
+.card h3 {
+  color: rgb(201, 201, 201);
+  margin-bottom: 5%;
+  font-size: 70%;
+}
+
 .card h2 {
   font-weight: 600;
+  color: rgb(201, 201, 201);
   margin-bottom: 0.7rem;
 }
 
 .card p {
-  margin: 0;
+  font-weight: 600;
+  color: rgb(201, 201, 201);
+  margin-bottom: 0.7rem;
+}
+
+.dull {
   opacity: 0.6;
+}
+
+.card {
+  margin: 0;
+  /* opacity: 0.6; */
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 30ch;
+  /* max-width: 30ch; */
+  text-wrap: balance;
+  text-align: center;
 }
 
 .center {
@@ -97,7 +124,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -107,6 +134,7 @@
 .logo {
   position: relative;
 }
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -178,11 +206,9 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
+    background: linear-gradient(to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--callout-rgb), 0.5));
     background-clip: padding-box;
     backdrop-filter: blur(24px);
   }
@@ -193,11 +219,9 @@
     inset: auto 0 0;
     padding: 2rem;
     height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgb(var(--background-end-rgb)) 40%);
     z-index: 1;
   }
 }
@@ -223,6 +247,7 @@
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }

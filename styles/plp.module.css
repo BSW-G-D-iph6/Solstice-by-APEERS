@@ -1,0 +1,291 @@
+.blur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
+}
+
+
+
+.heading {
+    text-align: center;
+}
+
+.animationheader::before {
+    content: '         ';
+
+    animation: animation infinite 15s;
+    color: grey;
+    /* padding-left: 10px; */
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.Button {
+    border-color: black;
+    border-style: solid;
+    background-color: aqua;
+    color: black;
+    flex-basis: 5%;
+    padding: 1%;
+    margin: 1%;
+}
+
+
+
+.outerbox {
+    background-color: black;
+    color: aqua;
+    /* padding: 5%;
+  margin: 10%; */
+    width: fit-content;
+    border-radius: 5%;
+    box-shadow: inset;
+    border-color: cyan;
+    border-style: solid;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+
+
+.outerbox:hover {
+    background-color: black;
+    color: aqua;
+    /* padding: 5%;
+  margin: 10%; */
+    margin: 1rem;
+    padding: 1.5rem;
+    width: fit-content;
+    border-radius: 5%;
+    box-shadow: inset;
+    border-color: cyan;
+    border-style: solid;
+    box-shadow: 5px 10px black;
+    /* transition: color 0.15s ease, border-color 0.15s ease; */
+    position: relative;
+    right: 5px;
+    top: -10px;
+}
+
+.flex {
+    /* padding: 4%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1%;
+    /* margin: 1%; */
+}
+
+.bswHone {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 250;
+}
+
+.bswPone {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: 50px;
+  font-weight: 250; */
+    opacity: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+
+
+
+
+
+/* ------------------------------------------------------------- */
+
+
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    width: 30%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* padding: 1.5rem; */
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 250;
+    color: rgba(255, 255, 255, 0.924);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 300px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+    color: rgb(255, 255, 255);
+    border-color: white;
+    border: 1px solid #eaeaeae7;
+
+}
+
+.card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    opacity: 50%;
+}
+
+
+
+.card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+.cardI {
+    margin: 1rem;
+    width: 90%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 250;
+    color: rgba(255, 255, 255, 0.924);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 99%;
+    justify-content: center;
+    text-align: center;
+    /* display: column; */
+}
+
+.cardM {
+    /* margin: 1rem; */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 250;
+    color: rgba(255, 255, 255, 0.924);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 99%;
+    justify-content: center;
+    text-align: center;
+    /* display: column; */
+    -webkit-backdrop-filter: blur(300px);
+        backdrop-filter: blur(300px);
+}
+
+.cardM:hover,
+.cardM:focus,
+.cardM:active {
+    color: rgb(255, 255, 255);
+    border-color: white;
+    border: 1px solid #eaeaeae7;
+
+}
+
+.cardM h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.cardM p {
+    opacity: 50%;
+}
+
+
+
+.cardM p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.cardM .left {
+
+    flex-basis: 30%;
+}
+
+.cardM .right {
+
+    flex-basis: 70%;
+}
+
+
+
+
+
+.logo {
+    height: 1em;
+    margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 601px) {
+
+    .cardM {
+        display: flex;
+        width: 98%;
+
+    }
+
+    .card {
+        margin: 1rem;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+  
+
+    .cardM {
+        display: column;
+        width: 100%;
+
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+.alert {
+    text-align: left;
+    margin-left: 1%;
+    padding-left: 1%;
+
+    width: 25%;
+    border-radius: 15px;
+    opacity: 90%;
+    color: #5A775B;
+    background-color: #EDF7ED;
+}
