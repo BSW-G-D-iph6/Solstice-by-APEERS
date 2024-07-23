@@ -1,6 +1,30 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import Navbar from "@/components/navbar";
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+
+
+// const ReduxProvider = dynamic(() => import("@/store/redux-provider"), {
+//   ssr: false
+// });
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  // persistStore(store);
+
+  return (
+  <>
+
+        {/* <div style={{ textAlign: 'end' }}>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn></div> */}
+        <Navbar />
+        <div className="blurMain">
+          <Component {...pageProps} />
+        </div>
+        </>
+  )
+   
 }
