@@ -1,6 +1,7 @@
 import { FooterComp } from "@/components/footer";
 import Navbar from "@/components/navbar";
 import "@/styles/globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 import type { AppProps } from "next/app";
 
 
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
   <>
+      <ClerkProvider>
 
         {/* <div style={{ textAlign: 'end' }}>
         <SignedOut>
@@ -24,9 +26,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <Navbar />
         <div className="blurMain">
           <Component {...pageProps} />
-        <FooterComp />
-
+          <FooterComp />
         </div>
+      </ClerkProvider>
         </>
   )
    

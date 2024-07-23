@@ -1,5 +1,6 @@
 
 
+import { SignedOut, SignInButton, SignedIn, UserButton } from '@clerk/nextjs'
 import '../styles/Home.module.css'
 export default function OwnRootLayout() {
 
@@ -40,7 +41,12 @@ export default function OwnRootLayout() {
                     <button className="btn btn-outline-success my-2 my-sm-0 nav-link disabled" type="submit">Search</button> */}
 {/*                  
                 </form> */}
-         
+                <SignedOut>
+                    <SignInButton />
+                </SignedOut>
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
                 <br/>
               
             </div>
