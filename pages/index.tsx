@@ -1,11 +1,12 @@
 import Image from "next/image";
 import styles from "./../styles/Home.module.css";
 import Iproducts, { Data } from "../db";
-
+import { gql } from "@apollo/client";
+import createApolloClient from "../graphql/appollo-client";
 export default function Home() {
   return (
     <main className={styles.main}>
-
+      {/* {graphqlll} */}
       <div className={styles.grid}>
 
         {Data.products.map((prop) => <Pdp item={prop} />)}

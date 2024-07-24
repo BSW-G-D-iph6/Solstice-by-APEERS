@@ -3,9 +3,14 @@ import { useRouter } from 'next/router'
 import { Data } from "../../db";
 import Button from '@mui/material/Button';
 import styles from '../../styles/plp.module.css'
-
+// import { store } from '../basket';
+import { useAppDispatch, useAppSelector } from '@/store';
+import { setAuthState } from '@/store/authslice';
 export default function Page() {
     const router = useRouter()
+
+    const authState = useAppSelector((state) => state.auth.authState);
+    const dispatch = useAppDispatch();
 
 
 
@@ -47,9 +52,11 @@ export default function Page() {
                     <b>{datalocal?.currency}{datalocal?.price}</b>
                     <br />
                     <br />
+                    <Button variant="outlined" sx={{ color: 'white', borderRadius: 10, borderColor: 'white', padding: 2 }} onClick={() => dispatch(setAuthState({ id: datalocal?.UUID }))}>Add to Basket ↗</Button>
                     <br />
                     <br />
 
+                    <Button variant="outlined" sx={{ color: 'white', borderRadius: 10, borderColor: 'white', padding: 2 }} href='/basket' onClick={() => dispatch(setAuthState({ id: datalocal?.UUID }))}>Buy Now ↗</Button>
 
 
                 </div>

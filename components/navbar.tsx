@@ -1,8 +1,16 @@
 
 
-import { SignedOut, SignInButton, SignedIn, UserButton } from '@clerk/nextjs'
+import {
+    ClerkProvider,
+    SignInButton,
+    SignedIn,
+    SignedOut,
+    UserButton
+} from '@clerk/nextjs'
 import '../styles/Home.module.css'
+import { useAppSelector } from '@/store';
 export default function OwnRootLayout() {
+    const BasketState = useAppSelector((state) => state.auth.authState);
 
     return (
 
@@ -17,7 +25,12 @@ export default function OwnRootLayout() {
                     <li className="nav-item active">
                         <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                     </li>
-                  
+                    {/* <li className="nav-item">
+                        <a className="nav-link" href="https://www.instagram.com/primepickz_47/">Instagram</a>
+                    </li> */}
+                    <li className="nav-item">
+                        <a className="nav-link" href="/basket">Basket {"("}{`${BasketState.length}`}{")"}</a>
+                    </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Currency
@@ -37,9 +50,9 @@ export default function OwnRootLayout() {
                     <button className="btn btn-outline-success my-2 my-sm-0 nav-link " type="submit" >Basket</button>
                 </a> */}
                 {/* <form className="form-inline my-2 my-lg-0"> */}
-                    {/* <input className="form-control mr-sm-2" type="search" placeholder="NOT WORKING YET" aria-label="Search" />
+                {/* <input className="form-control mr-sm-2" type="search" placeholder="NOT WORKING YET" aria-label="Search" />
                     <button className="btn btn-outline-success my-2 my-sm-0 nav-link disabled" type="submit">Search</button> */}
-{/*                  
+                {/*                  
                 </form> */}
                 <SignedOut>
                     <SignInButton />
@@ -47,8 +60,8 @@ export default function OwnRootLayout() {
                 <SignedIn>
                     <UserButton />
                 </SignedIn>
-                <br/>
-              
+                <br />
+
             </div>
         </nav>
 

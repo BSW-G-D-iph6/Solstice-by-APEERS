@@ -1,4 +1,7 @@
 import { ReactElement } from "react"
+import { gql } from "@apollo/client";
+import createApolloClient from "./graphql/appollo-client";
+
 export default interface Iproducts {
     title: string,
     benefit: string,
@@ -14,6 +17,52 @@ export default interface Iproducts {
 export interface idata {
     products: Iproducts[]
 }
+
+// export async function getStaticProps() {
+//     const client = createApolloClient();
+//     const { data } = await client.query({
+//         query: gql`
+//       query bob{
+//   allPoduct{
+//     UUID
+//     img
+//     tags
+//     benefit
+//     price
+//     currency
+//     detail
+//     title
+//   }
+// }
+//     `,
+//     });
+
+//     return {
+//         props: {
+//             allPoduct: data.allPoduct,
+//         },
+//     };
+// }
+
+
+// const allPoducts = gql`
+       
+//       query bob{
+//   allPoduct{
+//         UUID
+//         img
+//         tags
+//         benefit
+//         price
+//         currency
+//         detail
+//         title
+//     }
+// }
+  
+// `
+// export const Data: idata = getStaticProps
+
 
 export const Data: idata = {
     products: [
@@ -60,7 +109,7 @@ export const Data: idata = {
 
 
 Data.products.map((element) => {
-    const id = `${element.title}-${element.price}-${element.img}` ;
+    const id = `${element.title}-${element.price}-${element.img}`;
 
     element.UUID = id
 
