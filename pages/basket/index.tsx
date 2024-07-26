@@ -1,10 +1,12 @@
 import { Data } from "@/db";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { removefrombasket } from "@/store/authslice";
+import { initializedata } from "..";
 
 
 
 export default function Basket() {
+    initializedata()
     const BasketState = useAppSelector((state) => state.auth.authState);
     const dispatch = useAppDispatch();
 
@@ -14,6 +16,7 @@ export default function Basket() {
         dispatch(removefrombasket({ id: id }))
         return 123
     }
+    
     let Price = 0
 
 

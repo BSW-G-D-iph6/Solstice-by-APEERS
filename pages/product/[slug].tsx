@@ -6,10 +6,13 @@ import styles from '../../styles/plp.module.css'
 // import { store } from '../basket';
 import { useAppDispatch, useAppSelector } from '@/store';
 import { setAuthState } from '@/store/authslice';
+import { initializedata } from '..';
+import parse from 'html-react-parser'
+
 export default function Page() {
     const router = useRouter()
-
-    const authState = useAppSelector((state) => state.auth.authState);
+    initializedata()
+    // const authState = useAppSelector((state) => state.auth.authState);
     const dispatch = useAppDispatch();
 
 
@@ -25,7 +28,7 @@ export default function Page() {
                 <div className={styles.right}>
                     <h3>{datalocal?.title}</h3>
 
-                    {datalocal?.detail}
+                    {parse(datalocal?.detail ? datalocal?.detail: '<h1>Ooops.. something went wrong on our side...</h1>')}
                     <br />
                     <br />
 

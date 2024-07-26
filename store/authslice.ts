@@ -50,13 +50,13 @@ export const authSlice = createSlice({
         removefrombasket: (state, action: PayloadAction<IProductinfo>) => {
 
             const final = state.authState.filter(item => item.id != action.payload?.id)
+
             for (let index = 0; index < state.authState.length; index++) {
                 state.authState.pop();
             }
 
             for (let b = 0; b < final.length; b++) {
                 state.authState.push(final[b])
-
             }
             // state.authState.pop()
 
