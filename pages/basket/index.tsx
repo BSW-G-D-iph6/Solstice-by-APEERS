@@ -16,7 +16,7 @@ export default function Basket() {
         dispatch(removefrombasket({ id: id }))
         return 123
     }
-    
+
     let Price = 0
 
 
@@ -60,7 +60,12 @@ export default function Basket() {
                         <td></td>
                         <td></td>
                         <td>Total: £{Price}</td>
-                        <td></td></tr>
+                        <td>
+                            <a href="/checkout">
+                                <button className="btn btn-outline-success" >
+                                    Checkout
+                                </button></a>
+                        </td></tr>
                 </tbody>
             </table>
             <br />

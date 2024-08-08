@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.20",
     "@reduxjs/toolkit": "^2.2.6",
+    "discord.js": "^14.15.3",
     "graphql": "^16.9.0",
     "html-react-parser": "^5.1.12",
     "next": "14.2.4",

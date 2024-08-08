@@ -6,6 +6,7 @@ import createApolloClient from "../graphql/appollo-client";
 import { ICata } from "@/types/gql-product";
 
 export function initializedata() {
+  if (process.env.NEXT_PUBLIC_JAVA === true) {
 
   const allproductQuery = gql`
   query bob{
@@ -45,6 +46,7 @@ export function initializedata() {
     // objToPush = null
   }
 }
+}
 
 
 export default function Home() {
@@ -65,6 +67,7 @@ export default function Home() {
       </div>
     </main>
   );
+  
 }
 
 

@@ -26,43 +26,43 @@ export interface idata {
 
 export const Data: idata = {
     products: [
-        // {
-        //     title: "Superr",
-        //     benefit: "Save on Purchase | Customer",
-        //     detail: `<>
-        //         sadfas
-        //         adfas
-        //         asdfasdf
-        //         safasfdsa
+        {
+            title: "Superr",
+            benefit: "Save on Purchase | Customer",
+            detail: `<>
+                sadfas
+                adfas
+                asdfasdf
+                safasfdsa
 
-        //         asdfhasjkfhasd
+                asdfhasjkfhasd
 
-        //         <h1>asdfhasdjf</h1>
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //         asdfhsadhkfjsahkdl<br />
-        //     </>`,
-        //     tags: ['ads', 'asdf'],
-        //     price: 12,
-        //     img: "https://avatars.githubusercontent.com/u/132499310?v=4",
-        //     currency: '£',
-        //     UUID: ''
-        // },
+                <h1>asdfhasdjf</h1>
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+                asdfhsadhkfjsahkdl<br />
+            </>`,
+            tags: ['ads', 'asdf'],
+            price: 12,
+            img: "https://avatars.githubusercontent.com/u/132499310?v=4",
+            currency: '£',
+            UUID: ''
+        },
     ]
 }
 
