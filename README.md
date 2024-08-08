@@ -1,6 +1,6 @@
 
 ## Setting up Clerk signin
-Add these to your env.local file:
+Add these to your `.env.local` file:
  <br/> <br/>
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_Y2hhbXBpb24tZ251LTY3LmNsZXJrLmFjY291bnRzLmRldiQ <br/>
 CLERK_SECRET_KEY=sk_test_FRQGB6Ka2BeGqZZnk87oauF6OQb71eDNjmTEEdVzkh <br/>
