@@ -12,30 +12,6 @@ export default function Checkout() {
     const dispatch = useAppDispatch();
 
 
-    // function send() {
-    //     //  const { Client, Events, GatewayIntentBits, MessagePayload, Message, Embed } = require("discord.js");
-
-    //     const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-
-    //     client.guilds.cache.forEach((guild: { name: any; id: any; }) => {
-    //         console.log(`----------------------${guild.name} | ${guild.id}`);
-    //     })
-
-    //     client.on("ready", () => {
-    //         console.log("bot is online");
-
-    //     });
-
-    //     client.once(Events.ClientReady, (c: { user: { tag: any; }; }) => {
-    //         console.log(`Ready! Logged in as ${c.user.tag}`);
-    //         // client.users.fetch(`1112732302942937129`).then(user => user.send(`# BOT ACTIVE === ${date}-${hour}:${min}:${sec}`))
-    //         // client.users.fetch(`970690342410149928`).then(user => user.send(`# BOT ACTIVE === ${date}-${hour}:${min}:${sec}`))
-    //         client.channels.fetch(`1164208081081745521`).then((user: any) => user.send(`BOO *bahahah*, ik u got scared`))
-    //     });
-
-    //     // Log in to Discord with your client's token
-    //     client.login('MTE1NjUxNzE5Mzc0ODU3ODM1NA.Gaxadb.CIKaxnWKdHGSjDjN6bfNOcw-py-W-3Gslozybg');
-    // }
 
     let Price = 0
 

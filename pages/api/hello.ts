@@ -84,13 +84,14 @@ export default async function handler(
     // client.users.fetch(`1112732302942937129`).then(user => user.send(`# BOT ACTIVE === ${date}-${hour}:${min}:${sec}`))
     // client.users.fetch(`970690342410149928`).then(user => user.send(`# BOT ACTIVE === ${date}-${hour}:${min}:${sec}`))
     // client.channels.fetch(`1164208081081745521`).then((user: any) => user.send(`BOO *bahahah*, ik u got scared`))
-    client.channels.fetch(`1270349143201808477`).then((user: any) => user.send({ embeds: [exampleEmbed] }))
+    client.channels.fetch(`channel_id`).then((user: any) => user.send({ embeds: [exampleEmbed] }))
   });
 
   // Log in to Discord with your client's token
-  client.login('MTI3MDM0NzkyNzgyNjU5NTk3Mw.Gx3gEf.QmNrAhByhL20ijmuQpNLmq8BTuqu2joh6GT8r0');
+
+  // client.login("UR TOKEN")
 
 
-
+  
   res.status(200).json({ name: ` ${ids.map((product: any) => (`${product} `))}` })
 }
